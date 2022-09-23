@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="update.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Timer</title>
+</head>
+<body>
+    
+    <div class="headder">
+        <h1 align="center">Simple Counter</h1><hr>
+        <button type="submit" onclick="onTimer()" id="timer">Timer</button><br>
+        <button type="submit" onclick="onCountdown()" id="countdown">Countdown</button>
+        <hr>
+    </div>
+
+    <div>
+        <div id="timer-div" class="timer hidden"> <!--  hidden -->
+            Time Passed:    <input id="t-minutes" type="text" style="width: 10px;
+                    border: none; font-size: 16px; 
+                    font-weight: bold; color: black;"><font size="5"> :
+                            </font>
+            <input id="t-seconds" type="text" style="width: 20px;
+                            border: none; font-size: 16px;
+                            font-weight: bold; color: black;"><br>
+            <button onclick="initTimer()">Start</button>
+            <!-- <button onclick="pause()">Pause</button> DOES NOT WORK FOR SOME REASON -->
+            <button onclick="stop()">Stop</button>
+        </div>
+    
+        <div id="countdown-div" class="countdown hidden">
+            Time Left:    <input id="c-minutes" type="text" style="width: 10px;
+                 border: none; font-size: 16px; 
+                font-weight: bold; color: black;"><font size="5"> :
+                            </font>
+            <input id="c-seconds" type="text" style="width: 20px;
+                            border: none; font-size: 16px;
+                            font-weight: bold; color: black;"><br>
+            <button onclick="initCountdown()">Start</button>
+            <button onclick="pause()">Pause</button>
+            <button onclick="stop()">Stop</button>
+        </div>
+
+        <input id="placeholder" class="hidden" type="text" style="width: 0px; height: 0px;">
+    </div>
+</body>
+</html>
